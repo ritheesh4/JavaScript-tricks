@@ -69,3 +69,12 @@ const tools = { computer: 'Mac', editor: 'Atom' };
 const attributes = { handsomeness: 'Extreme', hair: 'Brown', eyes: 'Blue' };
 
 const summary = {...person, ...tools, ...attributes};
+
+// Self calling function
+(function(){
+  // some private code that will be executed automatically
+})();  
+(function(a,b){
+  var result = a+b;
+  return result;
+})(10,20)
