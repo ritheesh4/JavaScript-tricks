@@ -89,3 +89,13 @@ console.log(uniqueArray); // Result: [1, 2, 3, 5]
 
 // Before ES6, isolating unique values would involve a lot more code than that!
 // This trick works for arrays containing primitive types: undefined, null, boolean, string and number . (If you had an array containing objects, functions or additional arrays, you’d need a different approach!)
+
+//12. Float to Integer
+
+console.log(23.9 | 0);  // Result: 23
+console.log(-23.9 | 0); // Result: -23
+
+//13. Last items in an array
+let array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];console.log(array.slice(-1)); // Result: [9]
+console.log(array.slice(-2)); // Result: [8, 9]
+console.log(array.slice(-3)); // Result: [7, 8, 9]
