@@ -77,7 +77,7 @@ const summary = { ...person, ...tools, ...attributes };
   // some private code that will be executed automatically
 })();
 (function (a, b) {
-  var result = a + b;
+  let result = a + b;
   return result;
 })(10, 20);
 
@@ -120,3 +120,12 @@ const skills = {
   sleeping: "Pro",
 };
 const summary = { ...user, ...college, ...skills };
+
+//16. Property names can be dynamic.
+const dynamic = 'color';
+let item = {
+    brand: 'Ford',
+    [dynamic]: 'Blue'
+}
+console.log(item); 
+// { brand: "Ford", color: "Blue" }
