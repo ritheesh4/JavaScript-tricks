@@ -129,3 +129,41 @@ let item = {
 }
 console.log(item); 
 // { brand: "Ford", color: "Blue" }
+
+
+//17. Shortening console.log()
+let cl = console.log.bind(document);
+cl('hi'); // hi
+
+//18. Clone an Object
+// deep clone an object
+let newObj = JSON.parse(JSON.stringify(obj));
+// shallow clone an object
+let newObj = Object.assign({}, obj);
+
+//19. Get an Array of all the links in the document.
+let allLinks = document.links;
+
+//20. Methods for Navigating the DOM Tree:
+ele.parentNode  // find the parent of ele
+ele.firstChild  // find the first child node of ele
+ele.nextSibling // find the next sibling of ele
+ele.previousSibling //find the previous sibling of ele
+
+//21. Methods for Removal from the DOM Tree:
+ele.replaceChild(x, y) //replace child x of ele with node y
+ele.removeChild(x) // remove child x of ele
+
+//22. Methods to Copy Nodes:
+ele.cloneNode(false); // clone just the node (shallow copy)
+ele.cloneNode(true); // clone the node and its children (deep copy)
+ele.importNode(node); // import a node into ele
+
+//23. Methods for General Information:
+ele.nodeName; // returns the name attribute or DOM name
+ele.nodeType; // returns a number a.e. 3 is Text, 8 is comment
+ele.hasChildNodes(); // returns boolean if has children
+ele.childNodes; // returns live node list of children
+ele.textContent; // gets text of ele if exists
+ele.nodeValue;  // tends to work the same as textContent
+ele.contains(x); // returns true or false if ele contains x
