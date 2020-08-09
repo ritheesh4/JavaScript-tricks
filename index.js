@@ -122,18 +122,17 @@ const skills = {
 const summary = { ...user, ...college, ...skills };
 
 //16. Property names can be dynamic.
-const dynamic = 'color';
+const dynamic = "color";
 let item = {
-    brand: 'Ford',
-    [dynamic]: 'Blue'
-}
-console.log(item); 
+  brand: "Ford",
+  [dynamic]: "Blue",
+};
+console.log(item);
 // { brand: "Ford", color: "Blue" }
-
 
 //17. Shortening console.log()
 let cl = console.log.bind(document);
-cl('hi'); // hi
+cl("hi"); // hi
 
 //18. Clone an Object
 // deep clone an object
@@ -145,14 +144,14 @@ let newObj = Object.assign({}, obj);
 let allLinks = document.links;
 
 //20. Methods for Navigating the DOM Tree:
-ele.parentNode  // find the parent of ele
-ele.firstChild  // find the first child node of ele
-ele.nextSibling // find the next sibling of ele
-ele.previousSibling //find the previous sibling of ele
+ele.parentNode; // find the parent of ele
+ele.firstChild; // find the first child node of ele
+ele.nextSibling; // find the next sibling of ele
+ele.previousSibling; //find the previous sibling of ele
 
 //21. Methods for Removal from the DOM Tree:
-ele.replaceChild(x, y) //replace child x of ele with node y
-ele.removeChild(x) // remove child x of ele
+ele.replaceChild(x, y); //replace child x of ele with node y
+ele.removeChild(x); // remove child x of ele
 
 //22. Methods to Copy Nodes:
 ele.cloneNode(false); // clone just the node (shallow copy)
@@ -165,5 +164,15 @@ ele.nodeType; // returns a number a.e. 3 is Text, 8 is comment
 ele.hasChildNodes(); // returns boolean if has children
 ele.childNodes; // returns live node list of children
 ele.textContent; // gets text of ele if exists
-ele.nodeValue;  // tends to work the same as textContent
+ele.nodeValue; // tends to work the same as textContent
 ele.contains(x); // returns true or false if ele contains x
+
+//24. Sort Number arrays
+[0, 10, 4, 9, 123, 54, 1].sort((a, b) => a - b); //[0, 1, 4, 9, 10, 54, 123]
+
+//25 Append an array to another array
+let array1 = [12, "foo", { name: "Joe" }, -2458];
+
+let array2 = ["Doe", 555, 100];
+Array.prototype.push.apply(array1, array2);
+/* array1 will be equal to  [12 , "foo" , {name "Joe"} , -2458 , "Doe" , 555 , 100] */
