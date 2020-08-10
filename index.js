@@ -176,3 +176,6 @@ let array1 = [12, "foo", { name: "Joe" }, -2458];
 let array2 = ["Doe", 555, 100];
 Array.prototype.push.apply(array1, array2);
 /* array1 will be equal to  [12 , "foo" , {name "Joe"} , -2458 , "Doe" , 555 , 100] */
+
+//16. Easy way to remove falsy values from an array
+myArray.filter(Boolean);
