@@ -177,5 +177,12 @@ let array2 = ["Doe", 555, 100];
 Array.prototype.push.apply(array1, array2);
 /* array1 will be equal to  [12 , "foo" , {name "Joe"} , -2458 , "Doe" , 555 , 100] */
 
-//16. Easy way to remove falsy values from an array
+//26. Easy way to remove falsy values from an array
 myArray.filter(Boolean);
+
+//27. To convert NodeList into an array
+let elements = document.querySelectorAll("p"); // NodeList
+let arrayElements = [].slice.call(elements); // Now the NodeList is an array
+
+let arrayElements = Array.from(elements); // This is another way of converting NodeList to Array
+
