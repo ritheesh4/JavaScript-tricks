@@ -194,3 +194,9 @@ console.log(urlParams.get('action')); // "edit"
 console.log(urlParams.getAll('action')); // ["edit"]
 console.log(urlParams.toString()); // "?post=1234&action=edit"
 console.log(urlParams.append('active', '1')); // "?post=1234&action=edit&active=1"
+
+//Convert to boolean
+const isTrue  = !0;
+const isFalse = !1;
+const alsoFalse = !!0;console.log(isTrue); // Result: true
+console.log(typeof true); // Result: "boolean"
