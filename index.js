@@ -195,8 +195,11 @@ console.log(urlParams.getAll('action')); // ["edit"]
 console.log(urlParams.toString()); // "?post=1234&action=edit"
 console.log(urlParams.append('active', '1')); // "?post=1234&action=edit&active=1"
 
-//Convert to boolean
+//28. Convert to boolean
 const isTrue  = !0;
 const isFalse = !1;
 const alsoFalse = !!0;console.log(isTrue); // Result: true
 console.log(typeof true); // Result: "boolean"
+
+//29. await multiple async functions to finish by using Promise.all
+await Promise.all([anAsyncCall(), thisIsAlsoAsync(), oneMore()])
