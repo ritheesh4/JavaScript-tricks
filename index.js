@@ -203,3 +203,9 @@ console.log(typeof true); // Result: "boolean"
 
 //29. await multiple async functions to finish by using Promise.all
 await Promise.all([anAsyncCall(), thisIsAlsoAsync(), oneMore()])
+
+//30. Convert to nubmer
+let int = "15";
+int = +int;
+console.log(int); // Result: 15
+console.log(typeof int); Result: "number"
