@@ -209,3 +209,13 @@ let int = "15";
 int = +int;
 console.log(int); // Result: 15
 console.log(typeof int); Result: "number"
+
+//31. Random number generation
+//random number from 1 to N
+var random = Math.floor(Math.random() * N + 1);
+
+//random number from 1 to 10
+var random = Math.floor(Math.random() * 10 + 1);
+
+//random number from 1 to 100
+var random = Math.floor(Math.random() * 100 + 1);
