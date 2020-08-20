@@ -212,10 +212,16 @@ console.log(typeof int); Result: "number"
 
 //31. Random number generation
 //random number from 1 to N
-var random = Math.floor(Math.random() * N + 1);
+let random = Math.floor(Math.random() * N + 1);
 
 //random number from 1 to 10
-var random = Math.floor(Math.random() * 10 + 1);
+let random = Math.floor(Math.random() * 10 + 1);
 
 //random number from 1 to 100
-var random = Math.floor(Math.random() * 100 + 1);
+let random = Math.floor(Math.random() * 100 + 1);
+
+//32. Extract unique values
+let entries = [1, 2, 2, 3, 4, 5, 6, 6, 7, 7, 8, 4, 2, 1]
+let unique_entries = [...new Set(entries)];
+console.log(unique_entries);
+// [1, 2, 3, 4, 5, 6, 7, 8]
