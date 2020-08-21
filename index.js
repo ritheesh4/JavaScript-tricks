@@ -186,36 +186,47 @@ let arrayElements = [].slice.call(elements); // Now the NodeList is an array
 
 let arrayElements = Array.from(elements); // This is another way of converting NodeList to Array
 
-
 let urlParams = new URLSearchParams(window.location.search);
 
-console.log(urlParams.has('post')); // true
-console.log(urlParams.get('action')); // "edit"
-console.log(urlParams.getAll('action')); // ["edit"]
+console.log(urlParams.has("post")); // true
+console.log(urlParams.get("action")); // "edit"
+console.log(urlParams.getAll("action")); // ["edit"]
 console.log(urlParams.toString()); // "?post=1234&action=edit"
-console.log(urlParams.append('active', '1')); // "?post=1234&action=edit&active=1"
+console.log(urlParams.append("active", "1")); // "?post=1234&action=edit&active=1"
 
 //28. Convert to boolean
-const isTrue  = !0;
+const isTrue = !0;
 const isFalse = !1;
-const alsoFalse = !!0;console.log(isTrue); // Result: true
+const alsoFalse = !!0;
+console.log(isTrue); // Result: true
 console.log(typeof true); // Result: "boolean"
 
 //29. await multiple async functions to finish by using Promise.all
-await Promise.all([anAsyncCall(), thisIsAlsoAsync(), oneMore()])
+await Promise.all([anAsyncCall(), thisIsAlsoAsync(), oneMore()]);
 
 //30. Convert to nubmer
 let int = "15";
 int = +int;
 console.log(int); // Result: 15
-console.log(typeof int); Result: "number"
+console.log(typeof int);
+Result: "number";
 
 //31. Random number generation
 //random number from 1 to N
-var random = Math.floor(Math.random() * N + 1);
+let random = Math.floor(Math.random() * N + 1);
 
 //random number from 1 to 10
-var random = Math.floor(Math.random() * 10 + 1);
+let random = Math.floor(Math.random() * 10 + 1);
 
 //random number from 1 to 100
-var random = Math.floor(Math.random() * 100 + 1);
+let random = Math.floor(Math.random() * 100 + 1);
+
+//32. Extract unique values
+let entries = [1, 2, 2, 3, 4, 5, 6, 6, 7, 7, 8, 4, 2, 1];
+let unique_entries = [...new Set(entries)];
+console.log(unique_entries);
+// [1, 2, 3, 4, 5, 6, 7, 8]
+
+//33. Remove final numbers
+let str = "1553";
+Number(str.substring(0, str.length - 1));
