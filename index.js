@@ -230,3 +230,30 @@ console.log(unique_entries);
 //33. Remove final numbers
 let str = "1553";
 Number(str.substring(0, str.length - 1));
+
+//34. Stringify a function
+const func = () => {
+  console.log("This is a function");
+}
+const stringifiedFunc = `${func}`; /* `() => {
+  console.log("This is a function");
+}` */
+
+// 35. callable objects
+const func = () => {
+  // ...
+};
+func.prop = "value";
+console.log(func.prop); // "value"
+
+//36. Lexically- bound class methods
+class Example {
+  method() {
+    console.log(this);
+  }
+}
+
+const instance = new Example();
+const { method } = instance;
+
+method(); // undefined
