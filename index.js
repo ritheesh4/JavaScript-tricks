@@ -257,3 +257,74 @@ const instance = new Example();
 const { method } = instance;
 
 method(); // undefined
+
+// 37. Set property with variable
+
+//CSS
+// :root {
+//   --logoColor: "#333";
+//   --headerColor: "green";
+//   --avatarWidth: 150px;
+// } 
+myLogo.style.setProperty("--logoColor", "#505168");
+
+// 38. Set up comple values
+
+//CSS
+// #myCircle {
+//   --xPos: 0px;
+//   --yPos: 0px;
+  
+//   width: 100px;
+//   height: 100px;
+//   transform: translate3d(var(--xPos), var(--yPos), 0);
+// }
+
+let myCircle = document.querySelector("#myCircle");
+setTranslate(50, 75, myCircle);
+
+function setTranslate(xPos, yPos, el) {
+  el.style.setProperty("--xPos", xPos + "px");
+  el.style.setProperty("--yPos", yPos + "px");
+}
+
+// https://www.kirupa.com/html5/css_variables_js_win.htm
+
+// 39. Type coercion/conversion/casting
+
+// String to Number by prepending with plus sign
+const strNum = "123.456"
+console.log(strNum) // '123.456'
+console.log(+strNum) // 123.456
+console.log(typeof strNum) // string
+console.log(typeof +strNum) // number
+
+// Number to String by adding empty string
+const num = 123.456
+console.log(num) // 123.456
+console.log("" + num) // '123.456'
+console.log(num + "") // '123.456'
+console.log(typeof num) // number
+console.log(typeof "" + num) // string
+
+// Boolean to Number by prepending with plus sign
+console.log(true) // true
+console.log(+true) // 1
+console.log(false) // false
+console.log(+false) // 0
+
+// Various values to Boolean with double exclamation
+console.log(!!1) // true
+console.log(!!0) // false
+console.log(!!'hello') // true
+console.log(!!'') // false
+console.log(!![]) // true
+console.log(!!{}) // true
+console.log(!!undefined) // false
+console.log(!!NaN) // false
+console.log(!!null) // false
+
+// Date to Milliseconds by prepending with plus sign
+const someDate = new Date()
+console.log(typeof someDate) // object
+console.log(typeof +someDate) // number
