@@ -234,7 +234,7 @@ Number(str.substring(0, str.length - 1));
 //34. Stringify a function
 const func = () => {
   console.log("This is a function");
-}
+};
 const stringifiedFunc = `${func}`; /* `() => {
   console.log("This is a function");
 }` */
@@ -265,7 +265,7 @@ method(); // undefined
 //   --logoColor: "#333";
 //   --headerColor: "green";
 //   --avatarWidth: 150px;
-// } 
+// }
 myLogo.style.setProperty("--logoColor", "#505168");
 
 // 38. Set up comple values
@@ -274,7 +274,7 @@ myLogo.style.setProperty("--logoColor", "#505168");
 // #myCircle {
 //   --xPos: 0px;
 //   --yPos: 0px;
-  
+
 //   width: 100px;
 //   height: 100px;
 //   transform: translate3d(var(--xPos), var(--yPos), 0);
@@ -293,38 +293,62 @@ function setTranslate(xPos, yPos, el) {
 // 39. Type coercion/conversion/casting
 
 // String to Number by prepending with plus sign
-const strNum = "123.456"
-console.log(strNum) // '123.456'
-console.log(+strNum) // 123.456
-console.log(typeof strNum) // string
-console.log(typeof +strNum) // number
+const strNum = "123.456";
+console.log(strNum); // '123.456'
+console.log(+strNum); // 123.456
+console.log(typeof strNum); // string
+console.log(typeof +strNum); // number
 
 // Number to String by adding empty string
-const num = 123.456
-console.log(num) // 123.456
-console.log("" + num) // '123.456'
-console.log(num + "") // '123.456'
-console.log(typeof num) // number
-console.log(typeof "" + num) // string
+const num = 123.456;
+console.log(num); // 123.456
+console.log("" + num); // '123.456'
+console.log(num + ""); // '123.456'
+console.log(typeof num); // number
+console.log(typeof "" + num); // string
 
 // Boolean to Number by prepending with plus sign
-console.log(true) // true
-console.log(+true) // 1
-console.log(false) // false
-console.log(+false) // 0
+console.log(true); // true
+console.log(+true); // 1
+console.log(false); // false
+console.log(+false); // 0
 
 // Various values to Boolean with double exclamation
-console.log(!!1) // true
-console.log(!!0) // false
-console.log(!!'hello') // true
-console.log(!!'') // false
-console.log(!![]) // true
-console.log(!!{}) // true
-console.log(!!undefined) // false
-console.log(!!NaN) // false
-console.log(!!null) // false
+console.log(!!1); // true
+console.log(!!0); // false
+console.log(!!"hello"); // true
+console.log(!!""); // false
+console.log(!![]); // true
+console.log(!!{}); // true
+console.log(!!undefined); // false
+console.log(!!NaN); // false
+console.log(!!null); // false
 
 // Date to Milliseconds by prepending with plus sign
-const someDate = new Date()
-console.log(typeof someDate) // object
-console.log(typeof +someDate) // number
+const someDate = new Date();
+console.log(typeof someDate); // object
+console.log(typeof +someDate); // number
+
+// 40. Flatterning multidimensional arrays
+
+const arr = [11, [22, 33], [44, 55], 66];
+const flatArr = [].concat(...arr); // => [11,22,33,44,55,66]
+
+// 50. Map the array without the array.map method
+
+const cities = [
+  { name: 'Paris', visited: 'no' },
+  { name: 'Lyon', visited: 'no' },
+  { name: 'Marseille', visited: 'yes' },
+  { name: 'Rome', visited: 'yes' },
+  { name: 'Milan', visited: 'no' },
+  { name: 'Palermo', visited: 'yes' },
+  { name: 'Genoa', visited: 'yes' },
+  { name: 'Berlin', visited: 'no' },
+  { name: 'Hamburg', visited: 'yes' },
+  { name: 'New York', visited: 'yes' }
+];
+
+const cityNames = Array.from(cities,({names})=> name);
+console.log(cityNames);
+// outputs ["Paris", "Lyon", "Marseille", "Rome", "Milan", "Palermo", "Genoa", "Berlin", "Hamburg", "New York"]
