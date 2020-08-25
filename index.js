@@ -352,3 +352,6 @@ const cities = [
 const cityNames = Array.from(cities,({names})=> name);
 console.log(cityNames);
 // outputs ["Paris", "Lyon", "Marseille", "Rome", "Milan", "Palermo", "Genoa", "Berlin", "Hamburg", "New York"]
+
+//51. So other truthy
+console.log(0 && {a: 1}) // 0console.log(false && 'a') // falseconsole.log('2' && 5) // 5console.log([] || false) // []console.log(NaN || null) // nullconsole.log(true || 'a') // true
