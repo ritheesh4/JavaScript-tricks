@@ -355,3 +355,10 @@ console.log(cityNames);
 
 //51. So other truthy
 console.log(0 && {a: 1}) // 0console.log(false && 'a') // falseconsole.log('2' && 5) // 5console.log([] || false) // []console.log(NaN || null) // nullconsole.log(true || 'a') // true
+
+// 52. THe not not !! oeprator
+
+if (foo === undefined || foo === null ) {}
+if (foo.length === 0){}
+
+if (!! foo){}
