@@ -362,3 +362,12 @@ if (foo === undefined || foo === null ) {}
 if (foo.length === 0){}
 
 if (!! foo){}
+
+// 53. Self calling function
+(function(){
+  // some private code that will be executed automatically
+})();  
+(function(a,b){
+  var result = a+b;
+  return result;
+})(10,20)
