@@ -277,7 +277,7 @@ myLogo.style.setProperty("--logoColor", "#505168");
 
 //   width: 100px;
 //   height: 100px;
-//   transform: translate3d(var(--xPos), var(--yPos), 0);
+//   transform: translate3d(let(--xPos), let(--yPos), 0);
 // }
 
 let myCircle = document.querySelector("#myCircle");
@@ -368,6 +368,19 @@ if (!! foo){}
   // some private code that will be executed automatically
 })();  
 (function(a,b){
-  var result = a+b;
+  let result = a+b;
   return result;
 })(10,20)
+
+
+//54. Query string paramerters
+
+// Assuming "?post=1234&action=edit"
+
+let urlParams = new URLSearchParams(window.location.search);
+
+console.log(urlParams.has('post')); // true
+console.log(urlParams.get('action')); // "edit"
+console.log(urlParams.getAll('action')); // ["edit"]
+console.log(urlParams.toString()); // "?post=1234&action=edit"
+console.log(urlParams.append('active', '1')); // "?post=1234&action=edit&active=1"
