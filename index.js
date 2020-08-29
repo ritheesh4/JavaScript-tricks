@@ -384,3 +384,14 @@ console.log(urlParams.get('action')); // "edit"
 console.log(urlParams.getAll('action')); // ["edit"]
 console.log(urlParams.toString()); // "?post=1234&action=edit"
 console.log(urlParams.append('active', '1')); // "?post=1234&action=edit&active=1"
+
+// Various values to Boolean with double exclamation
+console.log(!!1); // true
+console.log(!!0); // false
+console.log(!!"hello"); // true
+console.log(!!""); // false
+console.log(!![]); // true
+console.log(!!{}); // true
+console.log(!!undefined); // false
+console.log(!!NaN); // false
+console.log(!!null); // false
