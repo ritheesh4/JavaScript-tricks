@@ -395,3 +395,10 @@ console.log(!!{}); // true
 console.log(!!undefined); // false
 console.log(!!NaN); // false
 console.log(!!null); // false
+
+
+//55. Extract unique values
+let entries = [1, 2, 2, 3, 4, 5, 6, 6, 7, 7, 8, 4, 2, 1];
+let unique_entries = [...new Set(entries)];
+console.log(unique_entries);
+// [1, 2, 3, 4, 5, 6, 7, 8]
