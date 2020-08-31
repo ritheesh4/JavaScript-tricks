@@ -402,3 +402,18 @@ let entries = [1, 2, 2, 3, 4, 5, 6, 6, 7, 7, 8, 4, 2, 1];
 let unique_entries = [...new Set(entries)];
 console.log(unique_entries);
 // [1, 2, 3, 4, 5, 6, 7, 8]
+
+
+//28. To convert NodeList into an array
+let elements = document.querySelectorAll("p"); // NodeList
+let arrayElements = [].slice.call(elements); // Now the NodeList is an array
+
+let arrayElements = Array.from(elements); // This is another way of converting NodeList to Array
+
+let urlParams = new URLSearchParams(window.location.search);
+
+console.log(urlParams.has("post")); // true
+console.log(urlParams.get("action")); // "edit"
+console.log(urlParams.getAll("action")); // ["edit"]
+console.log(urlParams.toString()); // "?post=1234&action=edit"
+console.log(urlParams.append("active", "1")); // "?post=1234&action=edit&active=1"
