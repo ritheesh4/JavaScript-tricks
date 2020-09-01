@@ -404,7 +404,7 @@ console.log(unique_entries);
 // [1, 2, 3, 4, 5, 6, 7, 8]
 
 
-//28. To convert NodeList into an array
+//56. To convert NodeList into an array
 let elements = document.querySelectorAll("p"); // NodeList
 let arrayElements = [].slice.call(elements); // Now the NodeList is an array
 
@@ -417,3 +417,10 @@ console.log(urlParams.get("action")); // "edit"
 console.log(urlParams.getAll("action")); // ["edit"]
 console.log(urlParams.toString()); // "?post=1234&action=edit"
 console.log(urlParams.append("active", "1")); // "?post=1234&action=edit&active=1"
+
+//57. Convert to nubmer
+let int = "15";
+int = +int;
+console.log(int); // Result: 15
+console.log(typeof int);
+Result: "number";
