@@ -424,3 +424,11 @@ int = +int;
 console.log(int); // Result: 15
 console.log(typeof int);
 Result: "number";
+
+//58. Access current location
+// JavaScript can access the current URL in parts. For this URL:
+`https://thatsanegg.com/example/index.html?s=article`
+window.location.protocol == `https:`
+window.location.host == `thatsanegg.com`
+window.location.pathname == `/example/index.html`
+window.location.search == `?s=article`
