@@ -432,3 +432,11 @@ window.location.protocol == `https:`
 window.location.host == `thatsanegg.com`
 window.location.pathname == `/example/index.html`
 window.location.search == `?s=article`
+
+//59 Destructuring assignments
+const object = { number: 10 };
+// Grabbing number
+const { number } = object;
+// Grabbing number and renaming it as otherNumber
+const { number: otherNumber } = object;
+console.log(otherNumber); //10
