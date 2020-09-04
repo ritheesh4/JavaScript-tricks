@@ -440,3 +440,12 @@ const { number } = object;
 // Grabbing number and renaming it as otherNumber
 const { number: otherNumber } = object;
 console.log(otherNumber); //10
+
+//60. Methods for General Information:
+ele.nodeName; // returns the name attribute or DOM name
+ele.nodeType; // returns a number a.e. 3 is Text, 8 is comment
+ele.hasChildNodes(); // returns boolean if has children
+ele.childNodes; // returns live node list of children
+ele.textContent; // gets text of ele if exists
+ele.nodeValue; // tends to work the same as textContent
+ele.contains(x); // returns true or false if ele contains x
