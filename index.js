@@ -449,3 +449,8 @@ ele.childNodes; // returns live node list of children
 ele.textContent; // gets text of ele if exists
 ele.nodeValue; // tends to work the same as textContent
 ele.contains(x); // returns true or false if ele contains x
+
+//61. If speed is more important to t remove the array elements use splice
+let array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+array = array.slice(0, 4);
+console.log(array); // Result: [0, 1, 2, 3]
