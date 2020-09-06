@@ -454,3 +454,20 @@ ele.contains(x); // returns true or false if ele contains x
 let array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 array = array.slice(0, 4);
 console.log(array); // Result: [0, 1, 2, 3]
+
+//62. Dynamic object keys
+const obj = {
+  name: "Austin",
+  language: "JavaScript"
+}
+
+let key = "name"
+
+console.log(obj.name) // Austin
+console.log(obj["name"]) // Austin
+key = "name"
+console.log(obj[key]) // Austin
+
+console.log(obj.language) // JavaScript
+console.log(obj["language"]) // JavaScript
+key = "language"
