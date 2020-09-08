@@ -471,3 +471,11 @@ console.log(obj[key]) // Austin
 console.log(obj.language) // JavaScript
 console.log(obj["language"]) // JavaScript
 key = "language"
+
+// Number to String by adding empty string
+const num = 123.456;
+console.log(num); // 123.456
+console.log("" + num); // '123.456'
+console.log(num + ""); // '123.456'
+console.log(typeof num); // number
+console.log(typeof "" + num); // string
