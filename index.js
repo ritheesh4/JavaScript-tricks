@@ -330,7 +330,6 @@ console.log(typeof someDate); // object
 console.log(typeof +someDate); // number
 
 // 40. Flatterning multidimensional arrays
-
 const arr = [11, [22, 33], [44, 55], 66];
 const flatArr = [].concat(...arr); // => [11,22,33,44,55,66]
 
@@ -479,3 +478,7 @@ console.log("" + num); // '123.456'
 console.log(num + ""); // '123.456'
 console.log(typeof num); // number
 console.log(typeof "" + num); // string
+
+//62. Cache variables
+let cached = document.getElementById('someElement');
+cached.addClass('cached-element');
