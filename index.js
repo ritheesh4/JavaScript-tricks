@@ -482,3 +482,9 @@ console.log(typeof "" + num); // string
 //62. Cache variables
 let cached = document.getElementById('someElement');
 cached.addClass('cached-element');
+
+//63 shuffle array elements
+let list = [1, 2, 3];
+console.log(list.sort(function() {
+    return Math.random() - 0.5
+})); // [2,1,3]
