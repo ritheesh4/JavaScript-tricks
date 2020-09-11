@@ -488,3 +488,11 @@ let list = [1, 2, 3];
 console.log(list.sort(function() {
     return Math.random() - 0.5
 })); // [2,1,3]
+
+//64. Dynamic object keys
+const obj = {
+  name: "Austin",
+  language: "JavaScript"
+}
+
+let key = "name"
