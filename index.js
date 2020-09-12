@@ -496,3 +496,9 @@ const obj = {
 }
 
 let key = "name"
+
+//64. Clone an Object
+// deep clone an object
+let newObj = JSON.parse(JSON.stringify(obj));
+// shallow clone an object
+let newObj = Object.assign({}, obj);
