@@ -502,3 +502,19 @@ let key = "name"
 let newObj = JSON.parse(JSON.stringify(obj));
 // shallow clone an object
 let newObj = Object.assign({}, obj);
+
+//65. Comma operator
+let x = 1;
+x = (x++, x);
+console.log(x);// expected output: 2
+x = (2, 3);
+console.log(x);
+// expected output: 3
+
+// 66. Swap values
+let a = 1, b = 2
+[a, b] = [b, a]
+console.log(a) // -> 2
+console.log(b) // -> 1
+
+
