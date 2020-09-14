@@ -517,4 +517,11 @@ let a = 1, b = 2
 console.log(a) // -> 2
 console.log(b) // -> 1
 
-
+// 67. Get query string parameters
+// Assuming "?post=1234&action=edit"
+let urlParams = new URLSearchParams(window.location.search);
+console.log(urlParams.has('post')); // true
+console.log(urlParams.get('action')); // "edit"
+console.log(urlParams.getAll('action')); // ["edit"]
+console.log(urlParams.toString()); // "?post=1234&action=edit"
+console.log(urlParams.append('active', '1')); // "?post=1234&action=edit&active=1"
