@@ -525,3 +525,16 @@ console.log(urlParams.get('action')); // "edit"
 console.log(urlParams.getAll('action')); // ["edit"]
 console.log(urlParams.toString()); // "?post=1234&action=edit"
 console.log(urlParams.append('active', '1')); // "?post=1234&action=edit&active=1"
+
+// 68. caculate the power
+// The following expressions are equivalent:
+Math.pow(2, n);
+2 << (n - 1);
+2**n;
+// For example, 2 << 3 = 16 is equivalent to 2 ** 4 = 16 .
+
+//69
+// Instead, the bitwise OR operator allows us to write:
+console.log(1553 / 10   | 0)  // Result: 155
+console.log(1553 / 100  | 0)  // Result: 15
+console.log(1553 / 1000 | 0)  // Result: 1
