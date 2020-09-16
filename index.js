@@ -538,3 +538,11 @@ Math.pow(2, n);
 console.log(1553 / 10   | 0)  // Result: 155
 console.log(1553 / 100  | 0)  // Result: 15
 console.log(1553 / 1000 | 0)  // Result: 1
+
+let one = 1, two = 2, three = 3;
+console.log(one && two && three); // Result: 3
+console.log(0 && null); // Result: 0
+
+let one = 1, two = 2, three = 3;
+console.log(one && two && three); // Result: 3
+console.log(0 && null); // Result: 0
