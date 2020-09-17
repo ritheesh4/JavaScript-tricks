@@ -546,3 +546,10 @@ console.log(0 && null); // Result: 0
 let one = 1, two = 2, three = 3;
 console.log(one && two && three); // Result: 3
 console.log(0 && null); // Result: 0
+
+//70 parameter validation
+const isRequired = () => { throw new Error('param is required'); };
+const print = (num = isRequired()) => { console.log(`printing ${num}`) };
+print(2);//printing 2
+print()// error
+print(null)//printing null
