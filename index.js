@@ -553,3 +553,14 @@ const print = (num = isRequired()) => { console.log(`printing ${num}`) };
 print(2);//printing 2
 print()// error
 print(null)//printing null
+
+//71. Promises
+
+const PromiseArray = [
+  Promise.resolve(100),
+  Promise.reject(null),
+  Promise.resolve("Data release"),
+  Promise.reject(new Error('Something went wrong'))];
+Promise.all(PromiseArray)
+.then(data => console.log('all resolved! here are the resolve values:', data))
+.catch(err => console.log('got rejected! reason:', err))
