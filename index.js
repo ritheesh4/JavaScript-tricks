@@ -564,3 +564,9 @@ const PromiseArray = [
 Promise.all(PromiseArray)
 .then(data => console.log('all resolved! here are the resolve values:', data))
 .catch(err => console.log('got rejected! reason:', err))
+
+// 72. Quick powers
+// The following expressions are equivalent:
+Math.pow(2, n);
+2 << (n - 1);
+2**n;
