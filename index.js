@@ -564,3 +564,37 @@ const PromiseArray = [
 Promise.all(PromiseArray)
 .then(data => console.log('all resolved! here are the resolve values:', data))
 .catch(err => console.log('got rejected! reason:', err))
+
+// 72. Quick powers
+// The following expressions are equivalent:
+Math.pow(2, n);
+2 << (n - 1);
+2**n;
+
+// 73. Shuffle elements in an array
+let list = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+console.log(list.sort(function() {
+    return Math.random() - 0.5
+})); 
+// [4, 8, 2, 9, 1, 3, 6, 5, 7]
+
+// 74. merge objects
+const person = { name: 'David Walsh', gender: 'Male' };
+const tools = { computer: 'Mac', editor: 'Atom' };
+const attributes = { handsomeness: 'Extreme', hair: 'Brown', eyes: 'Blue' };
+
+const summary = {...person, ...tools, ...attributes};
+
+// 75. required parameter
+const isRequired = () => { throw new Error('param is required'); };
+
+const hello = (name = isRequired()) => { console.log(`hello ${name}`) };
+
+// This will throw an error because no name is provided
+hello();
+
+// This will also throw an error
+hello(undefined);
+
+// These are good!
+hello(null);
