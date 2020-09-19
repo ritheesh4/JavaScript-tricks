@@ -577,3 +577,10 @@ console.log(list.sort(function() {
     return Math.random() - 0.5
 })); 
 // [4, 8, 2, 9, 1, 3, 6, 5, 7]
+
+// 74. merge objects
+const person = { name: 'David Walsh', gender: 'Male' };
+const tools = { computer: 'Mac', editor: 'Atom' };
+const attributes = { handsomeness: 'Extreme', hair: 'Brown', eyes: 'Blue' };
+
+const summary = {...person, ...tools, ...attributes};
