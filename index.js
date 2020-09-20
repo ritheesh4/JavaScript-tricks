@@ -598,3 +598,15 @@ hello(undefined);
 
 // These are good!
 hello(null);
+
+// 76. Short circuit evaluation
+x > 100 ? 'Above 100' : 'Below 100';
+x > 100 ? (x > 200 ? 'Above 200' : 'Between 100-200') : 'Below 100';
+
+// 77. Generate random set of alphanumeric characters
+function generateRandomAlphaNum(len) {
+  var rdmString = "";
+  for( ; rdmString.length < len; rdmString  += Math.random().toString(36).substr(2));
+  return  rdmString.substr(0, len);
+
+}
