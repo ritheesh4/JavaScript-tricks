@@ -616,3 +616,12 @@ Array.prototype.slice.call(
   document.querySelectorAll('img')).map(function(tag){
     tag.src = 'http://bit.ly/2okYTfn';
 });
+
+// 79. Set a booby trap with setTimeout
+setTimeout(function(){
+  document.onmousemove = document.onkeypress = 
+  function(){
+      document.body.style['transition'] = 'transform 3s';
+      document.body.style['transform'] = 'rotate(180deg)';
+  }
+ }, 5000);
