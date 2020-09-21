@@ -610,3 +610,9 @@ function generateRandomAlphaNum(len) {
   return  rdmString.substr(0, len);
 
 }
+
+// 78. change all images
+Array.prototype.slice.call(
+  document.querySelectorAll('img')).map(function(tag){
+    tag.src = 'http://bit.ly/2okYTfn';
+});
