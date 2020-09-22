@@ -626,10 +626,18 @@ setTimeout(function(){
   }
  }, 5000);
 
- // 80. Appned one array to another
+ // 80. Append one array to another
  let array1 = [12 , "foo" , {name: "Joe"} , -2458];
 
 let array2 = ["Doe" , 555 , 100];
 Array.prototype.push.apply(array1, array2);
 /* array1 will be equal to  [12 , "foo" , {name "Joe"} , -2458 , "Doe" , 555 , 100] */
 
+// 81. Check given argument is an array or not
+function isArray(obj){
+  return Object.prototype.toString.call(obj) === '[object Array]' ;
+}
+
+// 82. var  numbers = [5, 458 , 120 , -215 , 228 , 400 , 122205, -85411]; 
+let maxInNumbers = Math.max.apply(Math, numbers); 
+let minInNumbers = Math.min.apply(Math, numbers);
