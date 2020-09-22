@@ -605,7 +605,7 @@ x > 100 ? (x > 200 ? 'Above 200' : 'Between 100-200') : 'Below 100';
 
 // 77. Generate random set of alphanumeric characters
 function generateRandomAlphaNum(len) {
-  var rdmString = "";
+  let rdmString = "";
   for( ; rdmString.length < len; rdmString  += Math.random().toString(36).substr(2));
   return  rdmString.substr(0, len);
 
@@ -625,3 +625,11 @@ setTimeout(function(){
       document.body.style['transform'] = 'rotate(180deg)';
   }
  }, 5000);
+
+ // 80. Appned one array to another
+ let array1 = [12 , "foo" , {name: "Joe"} , -2458];
+
+let array2 = ["Doe" , 555 , 100];
+Array.prototype.push.apply(array1, array2);
+/* array1 will be equal to  [12 , "foo" , {name "Joe"} , -2458 , "Doe" , 555 , 100] */
+
