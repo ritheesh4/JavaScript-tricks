@@ -641,3 +641,15 @@ function isArray(obj){
 // 82. var  numbers = [5, 458 , 120 , -215 , 228 , 400 , 122205, -85411]; 
 let maxInNumbers = Math.max.apply(Math, numbers); 
 let minInNumbers = Math.min.apply(Math, numbers);
+
+// 83. URL access
+// JavaScript can access the current URL in parts. For this URL:
+`https://thatsanegg.com/example/index.html?s=article`
+window.location.protocol == `https:`
+window.location.host == `thatsanegg.com`
+window.location.pathname == `/example/index.html`
+window.location.search == `?s=article`
+
+// 84. Rounding numbers
+let n = 3.141592653;
+n = n.toFixed(3); // computes n = "3.142"
