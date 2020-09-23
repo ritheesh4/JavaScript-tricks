@@ -649,3 +649,7 @@ window.location.protocol == `https:`
 window.location.host == `thatsanegg.com`
 window.location.pathname == `/example/index.html`
 window.location.search == `?s=article`
+
+// 84. Rounding numbers
+let n = 3.141592653;
+n = n.toFixed(3); // computes n = "3.142"
