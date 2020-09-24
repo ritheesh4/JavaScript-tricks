@@ -668,3 +668,9 @@ let timeout = setTimeout( function () {
 xhr.open('GET', url, true);  
 
 xhr.send();
+
+// 86 Clone an object
+// deep clone an object
+let newObj = JSON.parse(JSON.stringify(obj));
+// shallow clone an object
+let newObj = Object.assign({}, obj); 
