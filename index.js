@@ -638,7 +638,7 @@ function isArray(obj){
   return Object.prototype.toString.call(obj) === '[object Array]' ;
 }
 
-// 82. var  numbers = [5, 458 , 120 , -215 , 228 , 400 , 122205, -85411]; 
+// 82. let  numbers = [5, 458 , 120 , -215 , 228 , 400 , 122205, -85411]; 
 let maxInNumbers = Math.max.apply(Math, numbers); 
 let minInNumbers = Math.min.apply(Math, numbers);
 
@@ -653,3 +653,18 @@ window.location.search == `?s=article`
 // 84. Rounding numbers
 let n = 3.141592653;
 n = n.toFixed(3); // computes n = "3.142"
+
+// 85. Set timeouts to XMLHttp
+let xhr = new XMLHttpRequest (); 
+xhr.onreadystatechange = function () {  
+    if (this.readyState == 4) {  
+        clearTimeout(timeout);  
+        // do something with response data 
+    }  
+}  
+let timeout = setTimeout( function () {  
+    xhr.abort(); // call error callback  
+}, 60*1000 /* timeout after a minute */ ); 
+xhr.open('GET', url, true);  
+
+xhr.send();
