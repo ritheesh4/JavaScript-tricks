@@ -689,3 +689,8 @@ let argArray = Array.prototype.slice.call(arguments);
 function isNumber(n){
   return !isNaN(parseFloat(n)) && isFinite(n);
 }
+
+//91. Verify given argument is an array
+function isArray(obj){
+  return Object.prototype.toString.call(obj) === '[object Array]' ;
+}
