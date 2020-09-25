@@ -258,7 +258,7 @@ const { method } = instance;
 
 method(); // undefined
 
-// 37. Set property with variable
+// 37. Set property with letiable
 
 //CSS
 // :root {
@@ -288,7 +288,7 @@ function setTranslate(xPos, yPos, el) {
   el.style.setProperty("--yPos", yPos + "px");
 }
 
-// https://www.kirupa.com/html5/css_variables_js_win.htm
+// https://www.kirupa.com/html5/css_letiables_js_win.htm
 
 // 39. Type coercion/conversion/casting
 
@@ -313,7 +313,7 @@ console.log(+true); // 1
 console.log(false); // false
 console.log(+false); // 0
 
-// Various values to Boolean with double exclamation
+// letious values to Boolean with double exclamation
 console.log(!!1); // true
 console.log(!!0); // false
 console.log(!!"hello"); // true
@@ -384,7 +384,7 @@ console.log(urlParams.getAll('action')); // ["edit"]
 console.log(urlParams.toString()); // "?post=1234&action=edit"
 console.log(urlParams.append('active', '1')); // "?post=1234&action=edit&active=1"
 
-// Various values to Boolean with double exclamation
+// letious values to Boolean with double exclamation
 console.log(!!1); // true
 console.log(!!0); // false
 console.log(!!"hello"); // true
@@ -479,7 +479,7 @@ console.log(num + ""); // '123.456'
 console.log(typeof num); // number
 console.log(typeof "" + num); // string
 
-//62. Cache variables
+//62. Cache letiables
 let cached = document.getElementById('someElement');
 cached.addClass('cached-element');
 
@@ -674,3 +674,23 @@ xhr.send();
 let newObj = JSON.parse(JSON.stringify(obj));
 // shallow clone an object
 let newObj = Object.assign({}, obj); 
+
+// 87. Generate array of numbers with a limit
+let numbersArray = [] , max = 100;
+for( let i=1; numbersArray.push(i++) < max;);  // numbers = [1,2,3 ... 100] 
+
+// 88. String trim funciton
+String.prototype.trim = function(){return this.replace(/^s+|s+$/g, "");};  
+
+// 89. Transform argument objects into array 
+let argArray = Array.prototype.slice.call(arguments);
+
+//90. Verify given argumnet is a number
+function isNumber(n){
+  return !isNaN(parseFloat(n)) && isFinite(n);
+}
+
+//91. Verify given argument is an array
+function isArray(obj){
+  return Object.prototype.toString.call(obj) === '[object Array]' ;
+}
