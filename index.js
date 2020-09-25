@@ -684,3 +684,8 @@ String.prototype.trim = function(){return this.replace(/^s+|s+$/g, "");};
 
 // 89. Transform argument objects into array 
 let argArray = Array.prototype.slice.call(arguments);
+
+//90. Verify given argumnet is a number
+function isNumber(n){
+  return !isNaN(parseFloat(n)) && isFinite(n);
+}
