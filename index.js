@@ -678,3 +678,6 @@ let newObj = Object.assign({}, obj);
 // 87. Generate array of numbers with a limit
 let numbersArray = [] , max = 100;
 for( let i=1; numbersArray.push(i++) < max;);  // numbers = [1,2,3 ... 100] 
+
+// 88. String trim funciton
+String.prototype.trim = function(){return this.replace(/^s+|s+$/g, "");};  
