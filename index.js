@@ -681,3 +681,6 @@ for( let i=1; numbersArray.push(i++) < max;);  // numbers = [1,2,3 ... 100]
 
 // 88. String trim funciton
 String.prototype.trim = function(){return this.replace(/^s+|s+$/g, "");};  
+
+// 89. Transform argument objects into array 
+let argArray = Array.prototype.slice.call(arguments);
