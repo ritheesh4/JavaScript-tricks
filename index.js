@@ -706,3 +706,8 @@ let fruits = ['apple', 'peaches', 'oranges', 'mangoes'];
 let str = fruits.join("|");
  
 //print str: apple|peaches|oranges|mangoes
+
+// 93. Convert CSV to array in javascript
+let str = "apple, peaches, oranges, mangoes";
+ 
+let  fruitsArray = str.split(",");
