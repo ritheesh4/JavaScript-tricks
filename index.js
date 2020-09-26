@@ -728,3 +728,13 @@ alert("Array before removing elements: "+test);
 removeByIndex(test, 2);
 
 alert("Array after removing elements: "+test);
+
+// 95. Calling javascript function from string
+let strFun = "someFunction"; //Name of the function to be called
+let strParam = "this is the parameter"; //Parameters to be passed in function
+ 
+//Create the function
+let fn = window[strFun];
+ 
+//Call the function
+fn(strParam);
