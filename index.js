@@ -738,3 +738,20 @@ let fn = window[strFun];
  
 //Call the function
 fn(strParam);
+
+// 96. remove duplicates from javscript array
+function removeDuplicates(arr) {
+	var temp = {};
+	for (var i = 0; i < arr.length; i++)
+		temp[arr[i]] = true;
+
+	var r = [];
+	for (var k in temp)
+		r.push(k);
+	return r;
+}
+
+//Usage
+let fruits = ['apple', 'orange', 'peach', 'apple', 'strawberry', 'orange'];
+let uniquefruits = removeDuplicates(fruits);
+//print uniquefruits ['apple', 'orange', 'peach', 'strawberry'];
