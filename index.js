@@ -711,3 +711,20 @@ let str = fruits.join("|");
 let str = "apple, peaches, oranges, mangoes";
  
 let  fruitsArray = str.split(",");
+
+// 94. Remove array element by index
+function removeByIndex(arr, index) {
+    arr.splice(index, 1);
+}
+
+test = new Array();
+test[0] = 'Apple';
+test[1] = 'Ball';
+test[2] = 'Cat';
+test[3] = 'Dog';
+
+alert("Array before removing elements: "+test);
+
+removeByIndex(test, 2);
+
+alert("Array after removing elements: "+test);
