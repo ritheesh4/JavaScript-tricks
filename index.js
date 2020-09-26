@@ -694,3 +694,15 @@ function isNumber(n){
 function isArray(obj){
   return Object.prototype.toString.call(obj) === '[object Array]' ;
 }
+
+// 92. Convert javscript array into csv
+let fruits = ['apple', 'peaches', 'oranges', 'mangoes'];
+ 
+let  str = fruits.valueOf();
+ 
+//print str: apple,peaches,oranges,mangoes
+let fruits = ['apple', 'peaches', 'oranges', 'mangoes'];
+ 
+let str = fruits.join("|");
+ 
+//print str: apple|peaches|oranges|mangoes
