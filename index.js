@@ -762,3 +762,12 @@ let dict = Object.create(null);
 
 // dict.__proto__ === "undefined"
 // No object properties exist until you add them
+
+//98. Query string parameters
+let urlParams = new URLSearchParams(window.location.search);
+
+console.log(urlParams.has('post')); // true
+console.log(urlParams.get('action')); // "edit"
+console.log(urlParams.getAll('action')); // ["edit"]
+console.log(urlParams.toString()); // "?post=1234&action=edit"
+console.log(urlParams.append('active', '1')); // "?post=1234&action=edit&active=1"
