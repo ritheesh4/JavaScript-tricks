@@ -755,3 +755,10 @@ function removeDuplicates(arr) {
 let fruits = ['apple', 'orange', 'peach', 'apple', 'strawberry', 'orange'];
 let uniquefruits = removeDuplicates(fruits);
 //print uniquefruits ['apple', 'orange', 'peach', 'strawberry'];
+
+//97. Create empty obejct
+
+let dict = Object.create(null);
+
+// dict.__proto__ === "undefined"
+// No object properties exist until you add them
