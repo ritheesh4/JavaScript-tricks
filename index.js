@@ -781,3 +781,10 @@ const name = person.name
 const age = person.age
 //with destructuring
 const { name, age } = person;
+
+// 100. Short circuit conditionals
+if (isValid){
+  gotoLogin();
+}
+//use this:
+isValid && gotoLogin();
