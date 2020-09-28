@@ -798,3 +798,7 @@ n = n.toFixed(3); // computes n = "3.142"
  // Do fun stuff
  }
 )()
+
+//103. Flattening multidimensional arrays
+const arr = [11, [22, 33], [44, 55], 66];
+const flatArr = [].concat(...arr); //=> [11, 22, 33, 44, 55, 66]
