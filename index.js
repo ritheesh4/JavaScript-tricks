@@ -802,3 +802,7 @@ n = n.toFixed(3); // computes n = "3.142"
 //103. Flattening multidimensional arrays
 const arr = [11, [22, 33], [44, 55], 66];
 const flatArr = [].concat(...arr); //=> [11, 22, 33, 44, 55, 66]
+
+//104. Flattening array more than two dimension
+function flattenArray(arr) {  const flattened = [].concat(...arr);  return flattened.some(item => Array.isArray(item)) ?     flattenArray(flattened) : flattened;}
+
