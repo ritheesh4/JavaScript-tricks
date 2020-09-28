@@ -792,3 +792,9 @@ isValid && gotoLogin();
 // 101. Rouding numbers
 let n = 3.141592653;
 n = n.toFixed(3); // computes n = "3.142"
+
+// 102. Immediate invoke function
+(function () {
+ // Do fun stuff
+ }
+)()
