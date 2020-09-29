@@ -858,3 +858,12 @@ const secondNode = new Node(() => {
 });
 
 console.log(node === nodeReference, node === secondNode); // true, false
+
+// Startws With() and ends With()
+const image ='hill-mountain.png';
+const validImage = image.endsWith('.png');
+// result: true
+
+const hillMountain = 'Hill Mountain';
+const startsWith = hillMountain.startsWith('Hill');
+// result: true
