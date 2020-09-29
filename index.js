@@ -821,3 +821,15 @@ const func = () => {
 };
 func.prop = "value";
 console.log(func.prop); // "value"
+
+// Lexically-bound class methods
+class Example {
+  method() {
+    console.log(this);
+  }
+}
+
+const instance = new Example();
+const { method } = instance;
+
+method(); // undefined
