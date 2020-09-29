@@ -859,7 +859,7 @@ const secondNode = new Node(() => {
 
 console.log(node === nodeReference, node === secondNode); // true, false
 
-// Startws With() and ends With()
+//108. Startws With() and ends With()
 const image ='hill-mountain.png';
 const validImage = image.endsWith('.png');
 // result: true
@@ -867,3 +867,12 @@ const validImage = image.endsWith('.png');
 const hillMountain = 'Hill Mountain';
 const startsWith = hillMountain.startsWith('Hill');
 // result: true
+
+//109. entires() method
+//The entries() method returns a new Array Iterator object that contains the key/ value pairs for each index in the array
+const arr = ['a', 'b', 'c']
+const iterator = arr.entries()
+console.log(iterator.next().value) 
+// Result: Array [0, "a"]
+console.log(iterator.next().value)
+//Result: Array [1, 'b']
