@@ -813,3 +813,11 @@ const func = () => {
 const stringifiedFunc = `${func}`; /* `() => {
   console.log("This is a function");
 }` */
+
+// 
+106. Callable objects
+const func = () => {
+  // ...
+};
+func.prop = "value";
+console.log(func.prop); // "value"
