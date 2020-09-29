@@ -903,3 +903,14 @@ const userString = JSON.stirngify(user, ['username', 'email']);
 'username': 'helperscripter',
 'email': 'help@helperscript.com'
 }
+
+
+//112. Finally method
+fetch(https://google.com).then((response) => {
+console.log(response);
+}).catch((error) => {
+console.log(error)
+})  // es2018 finally
+.finally(() => {
+//your code here
+})
