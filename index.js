@@ -877,7 +877,7 @@ console.log(iterator.next().value)
 console.log(iterator.next().value)
 //Result: Array [1, 'b']
 
-// Javascript some and every functions
+//110. Javascript some and every functions
 const moneyHeist = [
 {name : 'Denvar', age: '25'},
 {name : 'Oslo', age: '40'},
@@ -889,3 +889,17 @@ moneyHeist.every(el => el.age > 18)
 
 moneyHiest.some(el => el.age < 18 )
 //return true
+
+//111. Array replacer by json
+const user = {
+'username': 'helperscripter',
+'email': 'help@helperscript.com',
+'password': 'yourpassword'
+}
+
+const userString = JSON.stirngify(user, ['username', 'email']);
+//result: 
+{
+'username': 'helperscripter',
+'email': 'help@helperscript.com'
+}
