@@ -876,3 +876,16 @@ console.log(iterator.next().value)
 // Result: Array [0, "a"]
 console.log(iterator.next().value)
 //Result: Array [1, 'b']
+
+// Javascript some and every functions
+const moneyHeist = [
+{name : 'Denvar', age: '25'},
+{name : 'Oslo', age: '40'},
+{name : 'Tokyo', age: '17'}
+]
+
+moneyHeist.every(el => el.age > 18)
+//return  false
+
+moneyHiest.some(el => el.age < 18 )
+//return true
