@@ -914,3 +914,7 @@ console.log(error)
 .finally(() => {
 //your code here
 })
+
+//113. Short circuting
+x > 100 ? 'Above 100' : 'Below 100';
+x > 100 ? (x > 200 ? 'Above 200' : 'Between 100-200') : 'Below 100';
