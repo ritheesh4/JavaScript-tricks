@@ -833,3 +833,28 @@ const instance = new Example();
 const { method } = instance;
 
 method(); // undefined
+
+//107. Return from constructor
+// ...
+const cache = {};
+
+class Node {
+  constructor(config) {
+    const id = hash(`${config}`);
+
+    if (cache[id]) {
+      return cache[id];
+    } else {
+      cache[id] = this;
+      config();
+    }
+  }
+}
+
+const node = new Node(() => {});
+const nodeReference = new Node(() => {});
+const secondNode = new Node(() => {
+  console.log("Hello");
+});
+
+console.log(node === nodeReference, node === secondNode); // true, false
