@@ -741,12 +741,12 @@ fn(strParam);
 
 // 96. remove duplicates from javscript array
 function removeDuplicates(arr) {
-	var temp = {};
-	for (var i = 0; i < arr.length; i++)
+	let temp = {};
+	for (let i = 0; i < arr.length; i++)
 		temp[arr[i]] = true;
 
-	var r = [];
-	for (var k in temp)
+	let r = [];
+	for (let k in temp)
 		r.push(k);
 	return r;
 }
@@ -815,7 +815,7 @@ const stringifiedFunc = `${func}`; /* `() => {
 }` */
 
 // 
-106. Callable objects
+// 106. Callable objects
 const func = () => {
   // ...
 };
@@ -899,22 +899,19 @@ const user = {
 
 const userString = JSON.stirngify(user, ['username', 'email']);
 //result: 
-{
-'username': 'helperscripter',
-'email': 'help@helperscript.com'
-}
+// {
+// 'username': 'helperscripter',
+// 'email': 'help@helperscript.com'
+// }
 
 
 //112. Finally method
-fetch(https://google.com).then((response) => {
-console.log(response);
-}).catch((error) => {
-console.log(error)
-})  // es2018 finally
-.finally(() => {
-//your code here
-})
 
 //113. Short circuting
 x > 100 ? 'Above 100' : 'Below 100';
 x > 100 ? (x > 200 ? 'Above 200' : 'Between 100-200') : 'Below 100';
+
+// Avoid negative indexes
+let numbersArray = [1,2,3,4,5]; 
+let from = numbersArray.indexOf("foo") ;  // from is equal to -1 
+numbersArray.splice(from,2);    // will return [5]
