@@ -915,3 +915,8 @@ x > 100 ? (x > 200 ? 'Above 200' : 'Between 100-200') : 'Below 100';
 let numbersArray = [1,2,3,4,5]; 
 let from = numbersArray.indexOf("foo") ;  // from is equal to -1 
 numbersArray.splice(from,2);    // will return [5]
+
+// 114 Sum all the values from an array.
+let numbers = [3, 5, 7, 2];
+let sum = numbers.reduce((x, y) => x + y);
+console.log(sum); // ret
