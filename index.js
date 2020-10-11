@@ -920,3 +920,13 @@ numbersArray.splice(from,2);    // will return [5]
 let numbers = [3, 5, 7, 2];
 let sum = numbers.reduce((x, y) => x + y);
 console.log(sum); // ret
+
+// 115 Shorten if statement
+// Instead of using this                                      
+if (iAmHungry) {
+  bakeAnEgg()
+}
+// You can use this
+if (iAmHungry) bakeAnEgg()
+// Or this
+iAmHungry? bakeAnEgg() : 0
