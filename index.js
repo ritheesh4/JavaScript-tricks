@@ -930,3 +930,17 @@ if (iAmHungry) {
 if (iAmHungry) bakeAnEgg()
 // Or this
 iAmHungry? bakeAnEgg() : 0
+
+// 116 reutrn only the true values
+myArray
+    .map(item => {
+        // ...
+    })
+    // Get rid of bad values
+    .filter(Boolean);
+
+// 117 Create empty objects
+let dict = Object.create(null);
+
+// dict.__proto__ === "undefined"
+// No object properties exist until you add them
