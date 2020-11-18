@@ -944,3 +944,13 @@ let dict = Object.create(null);
 
 // dict.__proto__ === "undefined"
 // No object properties exist until you add them
+
+//118 Verify that a given argument is an array
+function isArray(obj){
+  return Object.prototype.toString.call(obj) === '[object Array]' ;
+} 
+
+//19 Max an minimum of array 
+let numbers = [5, 458 , 120 , -215 , 228 , 400 , 122205, -85411]; 
+let maxInNumbers = Math.max.apply(Math, numbers); 
+let minInNumbers = Math.min.apply(Math, numbers);
