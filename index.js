@@ -954,3 +954,15 @@ function isArray(obj){
 let numbers = [5, 458 , 120 , -215 , 228 , 400 , 122205, -85411]; 
 let maxInNumbers = Math.max.apply(Math, numbers); 
 let minInNumbers = Math.min.apply(Math, numbers);
+
+//120 remove duplicates from array
+function removeDuplicates(arr) {
+	let temp = {};
+	for (let i = 0; i < arr.length; i++)
+		temp[arr[i]] = true;
+
+	let r = [];
+	for (let k in temp)
+		r.push(k);
+	return r;
+}
