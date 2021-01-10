@@ -966,3 +966,11 @@ function removeDuplicates(arr) {
 		r.push(k);
 	return r;
 }
+
+// 121. Remove 0, undefined, null, false, etc.
+myArray
+    .map(item => {
+        // ...
+    })
+    // Get rid of bad values
+    .filter(Boolean);
