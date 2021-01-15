@@ -974,3 +974,8 @@ myArray
     })
     // Get rid of bad values
     .filter(Boolean);
+
+// 122. Sum all the values from an array.
+let numbers = [3, 5, 7, 2];
+let sum = numbers.reduce((x, y) => x + y);
+console.log(sum); // returns 17
