@@ -979,3 +979,16 @@ myArray
 let numbers = [3, 5, 7, 2];
 let sum = numbers.reduce((x, y) => x + y);
 console.log(sum); // returns 17
+
+//123. Short ciructi fucntioning
+if (hungry) {
+  goToFridge();
+}
+
+hungry && goToFridge()
+
+// 124. Swap values with array destructuring
+let a = 1, b = 2
+[a, b] = [b, a]
+console.log(a) // -> 2
+console.log(b) // -> 1
