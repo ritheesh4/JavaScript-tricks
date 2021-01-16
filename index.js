@@ -992,3 +992,6 @@ let a = 1, b = 2
 [a, b] = [b, a]
 console.log(a) // -> 2
 console.log(b) // -> 1
+
+// Get unique values of array
+let j = [...new Set([1, 2, 3, 3])]
