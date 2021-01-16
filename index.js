@@ -995,3 +995,12 @@ console.log(b) // -> 1
 
 // Get unique values of array
 let j = [...new Set([1, 2, 3, 3])]
+
+// Destructuring Alieases
+const obj = { x: 1 };
+
+// Grabs obj.x as { x }
+const { x } = obj;
+
+// Grabs obj.x as { otherName }
+const { x: otherName } = obj;
