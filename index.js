@@ -1013,3 +1013,10 @@ var item = {
 }
 console.log(item); 
 // { brand: "Ford", color: "Blue" }
+
+//124 Check is integer
+let mynum = 123;
+let mynumStr = "123";
+
+console.log(`${mynum} is a number?`, Number.isInteger(mynum));
+console.log(`${mynumStr} is a number?`, Number.isInteger(mynumStr));
