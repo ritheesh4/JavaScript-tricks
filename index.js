@@ -993,7 +993,7 @@ let a = 1, b = 2
 console.log(a) // -> 2
 console.log(b) // -> 1
 
-// Get unique values of array
+//125 Get unique values of array
 let j = [...new Set([1, 2, 3, 3])]
 
 // Destructuring Alieases
@@ -1004,3 +1004,12 @@ const { x } = obj;
 
 // Grabs obj.x as { otherName }
 const { x: otherName } = obj;
+
+//123 Property names can be dynamic
+const dynamic = 'color';
+var item = {
+    brand: 'Ford',
+    [dynamic]: 'Blue'
+}
+console.log(item); 
+// { brand: "Ford", color: "Blue" }
