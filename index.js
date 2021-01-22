@@ -1020,3 +1020,18 @@ let mynumStr = "123";
 
 console.log(`${mynum} is a number?`, Number.isInteger(mynum));
 console.log(`${mynumStr} is a number?`, Number.isInteger(mynumStr));
+
+// 125 Is require function
+const isRequired = () => { throw new Error('param is required'); };
+
+const hello = (name = isRequired()) => { console.log(`hello ${name}`) };
+
+// This will throw an error because no name is provided
+hello();
+
+// This will also throw an error
+hello(undefined);
+
+// These are good!
+hello(null);
+hello('David');
