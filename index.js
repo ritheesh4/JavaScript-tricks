@@ -1035,3 +1035,12 @@ hello(undefined);
 // These are good!
 hello(null);
 hello('David');
+
+// 126 Destructuring aliases
+const obj = { x: 1 };
+
+// Grabs obj.x as { x }
+const { x } = obj;
+
+// Grabs obj.x as { otherName }
+const { x: otherName } = obj;
